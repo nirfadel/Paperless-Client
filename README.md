@@ -24,5 +24,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
       a. currency-form.component - The form for submit the date (yyMM format) to the server
 4. model - currency.input - input date for sending the data to server
 5. services -
+   
    a. data.service - sharing data between components
+   
    b. paperless.service - service for getting the data from server using Observable      
