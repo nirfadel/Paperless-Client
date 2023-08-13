@@ -1,27 +1,22 @@
 # PaperlessApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+The Paperless app for convert currency(NIS to USD for now)
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Code 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. app.component - The main page where all the components of the project are set
+2. components -
+   2.1. charts - currency-chart - 
+      a. currency-chart.component - Graph implementation for showing the converter rates graph by day of month
+   2.2. converter-page  -
+      a. converter-page.component - Table implementation for showing the converter rates by day of month 
+   2.3. currency-form -
+      a. currency-form.component - The form for submit the date (yyMM format) to the server
+3. model - currency.input - input date for sending the data to server
+4. services -
+   a. data.service - sharing data between components
+   b. paperless.service - service for getting the data from server using Observable      
