@@ -1,0 +1,17 @@
+<div *ngIf="currencyModelOutput != null && currencyModelOutput != 'function' ">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Day of month</th>
+          <th scope="col">Rate</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let currency of currencyModelOutput?.GRAPH | keyvalue: valueAscOrder">
+          <td>{{ currency.key  }}</td>
+          <td>{{ currency.value | number : '1.2-2' }}</td>
+        </tr>
+        </tbody>
+      </table>
+</div>
+

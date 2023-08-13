@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="w-75 p-3">
+        <div class="row">
+            <div class="card">
+                <div class="card-header">
+                Currency converter
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="currencyForm!" (ngSubmit)="submitForm()" novalidate>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="text" class="form-control" id="inputDate" formControlName="date" placeholder="Date in format: yyMM">
+                            <button type="submit" class="btn btn-primary" [disabled]="!currencyForm.valid">Submit</button>
+                        </div>
+                        <div *ngIf="!_date?.valid && (_date?.dirty ||_date?.touched)" class="alert">
+                        <div [hidden]="_date?.errors?.['required']">
+                            Date is required with format : yyMM
+                          </div>
+                          <div [hidden]="!_date?.errors?.['minlength']">
+                            Min Length is 4
+                          </div>
+                          <div [hidden]="!_date?.errors?.['maxlength']">
+                            Max Length is 4
+                          </div>
+                         </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
